@@ -14,7 +14,7 @@ void UHealthComponent::TakeDamage(float Damage)
 	Health = FMath::Clamp(Health - Damage, 0.0F, MaxHealth);
 	OnDamageTaken.Broadcast();
 
-	if (Health < 0.0F)
+	if (Health <= 0.0F)
 	{
 		OnDeath.Broadcast();
 	}
