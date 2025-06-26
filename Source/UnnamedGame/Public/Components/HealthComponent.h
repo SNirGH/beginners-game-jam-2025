@@ -23,7 +23,7 @@ public:
 	UPROPERTY(BlueprintAssignable, Category = "Events")
 	FOnDeath OnDeath;
 
-	UPROPERTY(EditAnywhere, Category = "health")
+	UPROPERTY(EditAnywhere, Category = "Health")
 	float MaxHealth;
 
 	UFUNCTION(BlueprintCallable)
@@ -34,5 +34,6 @@ protected:
 	virtual void BeginPlay() override;
 
 private:
+	UPROPERTY(VisibleInstanceOnly, Category = "Health")
 	float Health;
 };
