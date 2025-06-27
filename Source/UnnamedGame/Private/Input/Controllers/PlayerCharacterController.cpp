@@ -34,7 +34,7 @@ void APlayerCharacterController::SetupInputComponent()
 
 void APlayerCharacterController::Move(const FInputActionValue& Value)
 {
-	FVector2D InputVector = Value.Get<FVector2D>();
+	const FVector2D InputVector = Value.Get<FVector2D>();
 	if (ACharacter* ControlledCharacter = GetCharacter())
 	{
 		const FRotator Rotation = ControlledCharacter->GetActorRotation();

@@ -9,7 +9,7 @@
 DECLARE_DYNAMIC_MULTICAST_DELEGATE(FOnDamageTaken);
 DECLARE_DYNAMIC_MULTICAST_DELEGATE(FOnDeath);
 
-UCLASS( ClassGroup=(HealthComponent), meta=(BlueprintSpawnableComponent) )
+UCLASS( ClassGroup=(Custom), meta=(BlueprintSpawnableComponent) )
 class UNNAMEDGAME_API UHealthComponent : public UActorComponent
 {
 	GENERATED_BODY()
@@ -23,12 +23,13 @@ public:
 	UPROPERTY(BlueprintAssignable, Category = "Events")
 	FOnDeath OnDeath;
 
-	UPROPERTY(EditAnywhere, Category = "Health")
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Health")
 	float MaxHealth;
 
 	UFUNCTION(BlueprintCallable)
 	void TakeDamage(float Damage);
 
+	UFUNCTION(BlueprintCallable)
 	FORCEINLINE float GetHealth() const { return Health; }
 protected:
 	virtual void BeginPlay() override;
