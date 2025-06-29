@@ -17,11 +17,10 @@ Built from scratch in just a few days, [description].
 
 ## 🚀 How to Play
 
-1. Clone the repo:
+1. Got to our itch.io page:
    ```bash
-   git clone https://github.com/SNirGH/beginners-game-jam-2025.git
-2. Open the project in Godot 4
+   [itch.io link]
+2. Download the necessary files:
    ```bash
-      -Open the [project file] file
-      -Hit ▶️ to run!
+      - Open the .exe file
 
